@@ -228,6 +228,12 @@
     if (minScale > maxScale) {
         minScale = maxScale;
     }
+    
+    if (boundsSize.width < boundsSize.height) {
+        maxScale = MIN(maxScale, boundsSize.width / self.minOutputSize.width);
+    } else {
+        maxScale = MIN(maxScale, boundsSize.height / self.minOutputSize.height);
+    }
         
     self.maximumZoomScale = maxScale;
     self.minimumZoomScale = minScale;
