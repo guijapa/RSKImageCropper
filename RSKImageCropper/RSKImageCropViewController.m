@@ -284,7 +284,7 @@ static const CGFloat kLayoutImageScrollViewAnimationDuration = 0.25;
 
 #pragma mark - Custom Accessors
 
-- (void)setMinOutputSize(CGSize *)size {
+- (void)setMinOutputSize:(CGSize)size {
     self.imageScrollView.minOutputSize = size;
 }
 
